@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.error-div {
+  background: red;
+  height: 2rem;
+  width: 100%;
+  transition: all 1s;
+  /* display: none; */
+}
+.Nodisplay-error {
+  display: none;
+}

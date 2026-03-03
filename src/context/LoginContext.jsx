@@ -6,6 +6,10 @@ export const LoginProvider = ({ children }) => {
   const [userData, setUserdata] = useState(null);
   const [loginStatus, setLoginStatus] = useState(false);
   const [loadingStatus, setLoadingStatus] = useState(true);
+  const [isError, setIsError] = useState(false);
+  const [errors, setError] = useState("");
+  const [success, setSucess] = useState("");
+  const [IsSuccess, setIsSucces] = useState(false);
 
   const login = (data) => {
     localStorage.setItem("userdata", JSON.stringify(data));
@@ -38,7 +42,21 @@ export const LoginProvider = ({ children }) => {
 
   return (
     <LoginContext.Provider
-      value={{ login, userData, logout, loginStatus, loadingStatus }}
+      value={{
+        login,
+        userData,
+        logout,
+        loginStatus,
+        loadingStatus,
+        setIsError,
+        isError,
+        setError,
+        errors,
+        success,
+        setIsSucces,
+        setSucess,
+        IsSuccess,
+      }}
     >
       {children}
     </LoginContext.Provider>

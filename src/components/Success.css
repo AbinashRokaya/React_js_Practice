@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.success-div {
+  background: green;
+  height: 2rem;
+  width: 100%;
+  transition: all 1s;
+  /* display: none; */
+}
+.NoSuccess {
+  display: none;
+}
